@@ -55,7 +55,7 @@ class User(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
-    date_of_birth = models.DateField()
+    date_of_birth = models.DateField(null=True)
     name = models.CharField(
         verbose_name='name',
         max_length=64,

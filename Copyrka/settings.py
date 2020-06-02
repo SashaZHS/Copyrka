@@ -21,9 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'zo$+cvc*_$qbt$i6cx7to7_-ry-o0#3dl^hn@vw(50qxh*@9&j'
+# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','zo$+cvc*_$qbt$i6cx7to7_-ry-o0#3dl^hn@vw(50qxh*@9&j')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = []
 AUTH_USER_MODEL = 'users.User'
@@ -80,11 +82,11 @@ WSGI_APPLICATION = 'Copyrka.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Authorization',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': 'Auth_copyrka',
+        'USER': 'doadmin',
+        'PASSWORD': 'cy7zhg0sgbib4m6b',
+        'HOST': 'copyrka-cluster1-do-user-7567478-0.a.db.ondigitalocean.com',
+        'PORT': '25060',
     }
 }
 
